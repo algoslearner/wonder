@@ -2,7 +2,6 @@
 from bs4 import BeautifulSoup
 from requests import get
 
-
 def search(term, num_results=20, lang="en", proxy=None):
     usr_agent = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
