@@ -20,10 +20,11 @@ url = f"https://www.googleapis.com/customsearch/v1?key={API_KEY}&cx={SEARCH_ENGI
 
 # make the API request
 # using requests' json() method to automatically parse the returned JSON data to a Python dictionary
-data = requests.get(url).json()
+#data = requests.get(url).json()
+data = requests.get(url)
 
 # output json data to textfile
-output_file = open("outputJSON.txt", 'w')
+output_file = open("output_json.txt", 'w')
 for i in data:
-	print(data[i], file=output_file)
+	print(i, file=output_file)
 output_file.close()

@@ -38,15 +38,10 @@ def search(term, num_results=20, lang="en", proxy=None):
 
 # search io
 query = input("Enter your search query: ")
-#store query and search results in output.txt file
-output_file = open("output.txt", 'w')
-print("***********************", file=output_file)
-print(query, file=output_file)
-print("***********************", file=output_file)
-
+#store search results in output.txt file
+output_file = open("output_urls.txt", 'w')
 # for i in search(query, tld="com", lang='en', num=10, stop=10, pause=2):
 # 	print(i, file=output_file)
 for i in search(query):
 	print(i, file=output_file)
-print("***********************", file=output_file)
 output_file.close()
