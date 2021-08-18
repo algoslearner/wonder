@@ -25,7 +25,5 @@ data = requests.get(url).json()
 # output json data to textfile
 output_file = open("outputJSON.txt", 'w')
 for i in data:
-	print(i, file=output_file)
-for i in data:
 	print(data[i], file=output_file)
 output_file.close()
